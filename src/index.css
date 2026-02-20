@@ -29,3 +29,30 @@ header > h2{
 main {
  margin-top: 2%;
 }
+
+/*Movie Card*/
+
+.movie-card{
+  width: 18vw;
+  height: 60vh;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+
+}
+
+.movie-card:hover{
+  box-sizing: border-box;
+  box-shadow: 0px 1px 3px 0px rgba(105, 22, 22, 0.1), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+}
+
+.imgFrame{
+  width: 18vw;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.movie-image{
+  width: inherit;
+
+  
+}
