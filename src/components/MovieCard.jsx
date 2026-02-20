@@ -4,7 +4,7 @@ export default function MovieCard(){
             <div className="imgFrame">
                 <img  className="movie-image" src="https://m.media-amazon.com/images/M/MV5BMGFlMTVkMDktZGMzMC00Yjk4LWFmNzEtNTFmMzM2YzM3MWFkXkEyXkFqcGc@._V1_.jpg" alt="Movie" />
                 </div>
-            <h2>Ziningi izihloko ezikhona empilweni </h2>
+            <h2>Wuthering Heights </h2>
             <div className="textDes">Ratings: <b>6.3</b></div>
             <div className="textDes">Year: <b>2026</b></div>
             <div className="textDes" > Genres: <b>bam bam</b></div>

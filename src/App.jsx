@@ -7,6 +7,19 @@ function App() {
       <Header/>
       <main>
         <MovieCard></MovieCard>
+        <MovieCard></MovieCard>
+        <MovieCard></MovieCard>
+        <MovieCard></MovieCard>
+        <MovieCard></MovieCard>
+        <MovieCard></MovieCard>
+        <MovieCard></MovieCard>
+        <MovieCard></MovieCard>
+        <MovieCard></MovieCard>
+        <MovieCard></MovieCard>
+        <MovieCard></MovieCard>
+        <MovieCard></MovieCard>
+        <MovieCard></MovieCard>
+        <MovieCard></MovieCard>
       </main>
       </>
   )
