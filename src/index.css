@@ -27,8 +27,12 @@ header > h2{
 }
 
 main {
- margin-top: 2%;
+ margin-top: 5%;
  padding-left: 2%;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 2rem;
+ justify-content: center;
 }
 
 /*Movie Card*/
