@@ -22,7 +22,7 @@ function App() {
     }
 
     const dataVariable = await response.json(); 
-
+    console.log(dataVariable)
     setData(dataVariable.titles); 
     return dataVariable;
 
@@ -34,6 +34,8 @@ function App() {
   
 
   const movies = data.map(movie_data=>{
+
+    
     return ( <MovieCard 
              key = {movie_data.id}
              title  = {movie_data.primaryTitle}
@@ -41,7 +43,7 @@ function App() {
              year = {movie_data.startYear}
              type = {movie_data.genres.join(", ") }
              plot = {movie_data.plot}
-             //ratings = {movie_data.rating.aggregateRating}
+             ratings = { "rating" in movie_data ? movie_data.rating.aggregateRating: "-"}
     />)}
   )
   
