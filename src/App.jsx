@@ -1,8 +1,12 @@
 import Header from "./components/Header.jsx"
 import MovieCard from "./components/MovieCard.jsx"
+
+import { useEffect } from "react"
+import { useState } from "react"
+
 function App() {
 
-  console.log( fetchTitles())
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   return (
     <>
