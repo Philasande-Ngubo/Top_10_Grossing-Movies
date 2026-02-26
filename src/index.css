@@ -154,3 +154,25 @@ a {
     height: 180px;
   }
 }
+
+.stars{
+  display: inline-block; /* Allows the element to wrap content while supporting background properties */
+  color: transparent; /* Makes the text itself transparent */
+  
+  
+  /* The core of the gold effect using a linear gradient with multiple stops */
+  background: linear-gradient(to bottom, 
+    #d9a431 22%, 
+    #c3800c 24%, 
+    #9d7828 26%, 
+    yellow 27%, 
+    #ffecb3 40%, 
+    #875f0f 78%
+  );
+  
+  /* Clips the background to the shape of the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+ 
+}
