@@ -22,7 +22,7 @@ function App() {
     }
 
     const dataVariable = await response.json(); 
-    console.log(dataVariable)
+
     setData(dataVariable.titles); 
     return dataVariable;
 
