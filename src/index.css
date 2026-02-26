@@ -82,3 +82,7 @@ main {
 .movie-card > .textDes > b{
   font-weight: 600;
 }
+
+.loading{
+  color: rgba(0, 0, 0, 0.45);
+}

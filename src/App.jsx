@@ -6,7 +6,7 @@ import { useState } from "react"
 
 function App() {
 
-  const [data, setData] = useState(false);
+  const [data, setData] = useState([]);
   useEffect(() => {
     fetchTitles()
   }, []);
@@ -22,20 +22,34 @@ function App() {
     }
 
     const dataVariable = await response.json(); 
-    
-    setData(dataVariable); 
+
+    setData(dataVariable.titles); 
     return dataVariable;
 
-  } catch (error) {
-    console.error('There has been a problem with your fetch operation:', error);
+   } catch (error) {
+     console.error('There has been a problem with your fetch operation:', error);
+   }
   }
-}
 
+  
+
+  const movies = data.map(movie_data=>{
+    return ( <MovieCard 
+             key = {movie_data.id}
+             title  = {movie_data.primaryTitle}
+             imgSrc = {movie_data.primaryImage.url}
+             year = {movie_data.startYear}
+             type = {movie_data.genres.join(", ") }
+             plot = {movie_data.plot}
+             //ratings = {movie_data.rating.aggregateRating}
+    />)}
+  )
+  
   return (
     <>
       <Header/>
       <main>
-        { data ? <MovieCard/> : <p >Loading...</p> }
+        { data.length!=0 ? movies : <p className="loading" ><i>Loading...</i></p> }
        
       </main>
       </>

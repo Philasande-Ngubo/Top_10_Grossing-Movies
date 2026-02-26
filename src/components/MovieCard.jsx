@@ -1,8 +1,8 @@
-export default function MovieCard(){
+export default function MovieCard(props){
     return (
         <section className="movie-card">
             <div className="imgFrame">
-                <img  className="movie-image" src="https://m.media-amazon.com/images/M/MV5BMGFlMTVkMDktZGMzMC00Yjk4LWFmNzEtNTFmMzM2YzM3MWFkXkEyXkFqcGc@._V1_.jpg" alt="Movie" />
+                <img  className="movie-image" src={props.imgSrc} alt="Movie" />
                 </div>
             <h2>Wuthering Heights </h2>
             <div className="textDes">Ratings: <b>6.3</b></div>
