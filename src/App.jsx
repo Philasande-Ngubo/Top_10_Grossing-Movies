@@ -6,20 +6,13 @@ import { useState } from "react"
 
 function App() {
 
-  const [hasLoaded, setHasLoaded] = useState(false);
+  const [data, setData] = useState(false);
+  useEffect(() => {
+    fetchTitles()
+  }, []);
 
-  return (
-    <>
-      <Header/>
-      <main>
-        <MovieCard></MovieCard>
-       
-      </main>
-      </>
-  )
-}
 
-async function fetchTitles() {
+  async function fetchTitles() {
   const url = 'https://api.imdbapi.dev/titles'; // Example API endpoint
   
   try {
@@ -30,12 +23,25 @@ async function fetchTitles() {
 
     const dataVariable = await response.json(); 
     
-    console.log(dataVariable); 
+    setData(dataVariable); 
     return dataVariable;
 
   } catch (error) {
     console.error('There has been a problem with your fetch operation:', error);
   }
 }
+
+  return (
+    <>
+      <Header/>
+      <main>
+        { data ? <MovieCard/> : <p >Loading...</p> }
+       
+      </main>
+      </>
+  )
+}
+
+
 
 export default App
