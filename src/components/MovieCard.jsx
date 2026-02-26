@@ -1,6 +1,9 @@
 export default function MovieCard(props){
     return (
-        <a href={"https://www.youtube.com/results?search_query="+props.title.replace(" ","+")}>
+        <a 
+        href={"https://www.youtube.com/results?search_query="+props.title.replaceAll(" ","+")+"+Trailer"} 
+        target="_blank" 
+        rel="noopener noreferrer">
             <section className="movie-card">
             <div className="imgFrame">
                 <img  className="movie-image" src={props.imgSrc} alt={props.title+" image"} />
